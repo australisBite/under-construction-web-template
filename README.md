@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="./src/lib/assets/favicon.svg" alt="TuCopiloto Logo" width="80" height="80" />
-  <h1>TuCopiloto Web Frontend</h1>
+  <img src="./src/lib/assets/favicon.svg" alt="Web frontend template" width="80" height="80" />
+  <h1>Web frontend template</h1>
   <p><strong>Plataforma web de última generación construida con Svelte 5 y Three.js</strong></p>
 
   [![Svelte 5](https://img.shields.io/badge/Svelte-5.0-ff3e00?logo=svelte)](https://svelte.dev)
@@ -30,7 +30,9 @@
 
 ## 🚀 Vision General
 
-TuCopiloto es una aplicación web moderna diseñada para la máxima eficiencia y una experiencia de usuario inmersiva. Este repositorio contiene el **frontend**, desarrollado con el stack más avanzado de 2026, enfocado en rendimiento, seguridad y una estética refinada.
+Esta es una demo que forma parte de una aplicación web moderna diseñada para la máxima eficiencia y una experiencia de usuario inmersiva. Este repositorio contiene el **frontend**, desarrollado con un stack liviano y moderno, enfocado en rendimiento, seguridad y una estética refinada aprovechando la nueva version de svelte 5 y su simplicidad.
+
+tucopiloto.net nace como respuesta a un nicho en constante crecimiento, la necesidad de tener un asistente personal que nos ayude en nuestras tareas diarias, desde la gestión de tareas repetitivas, hasta la creacion de ordenes de compra, tucopilo responde a esas necesidades, enfocado en negocios emergentes, implementando tecnologias y los estandares mas modernos de la ingenieria de software como los RAG y el machine learning, ahorrando tiempo y recursos valiosos, y posicionando a nuestros usuarios a la vanguardia de la tecnologia convirtiendo tu proyecto en un negocio realmente competitivo en el mercado.
 
 ### ✨ Características Destacadas
 
@@ -96,5 +98,4 @@ La aplicación estará disponible en `http://localhost:5173`.
   Desarrollado por <strong>Erick Carrillo y Claude Code</strong><br/>
   <a href="https://github.com/australisBite">@australisBite</a>
 </div>
-# under-construction-template-website
-# under-construction-template-website
+
