@@ -1,0 +1,132 @@
+# ============================================================
+# .gitignore — Universal ignore rules
+# ============================================================
+
+
+
+# ── TEMPORAL IGNORED ──
+
+CONTRIBUTING.md
+
+# ── TEMPORAL IGNORED ──
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── IDEs & Editors ──
+.vscode/
+.idea/
+*.iml
+.project
+.pydevproject
+.settings/
+*.swp
+*.swo
+*~
+
+# ── AI Agents ──
+CLAUDE.md
+GEMINI.md
+AGENTS.md
+.claude/
+.gemini/
+.github/
+.mcp.json
+
+# ============================================================
+# Node / JavaScript / TypeScript
+# ============================================================
+
+# ── Dependencies ──
+node_modules/
+package-lock.json
+yarn.lock
+
+# ── SvelteKit ──
+.svelte-kit/
+
+# ── Build output ──
+.output
+.vercel
+.netlify
+.wrangler
+
+# ── Vite ──
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# ── Playwright (E2E) ──
+test-results/
+
+# ============================================================
+# Python
+# ============================================================
+
+# ── Virtual environments ──
+.venv/
+venv/
+env/
+ENV/
+
+# ── Cache & compiled ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.whl
+
+# ── Build ──
+dist/
+build/
+
+# ── Testing & coverage ──
+.pytest_cache/
+.coverage
+*.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# ============================================================
+# Secrets & Environment (CRITICAL)
+# ============================================================
+.env
+.env.local
+.env.*.local
+.env.prod
+.env.*.vault
+!.env.example
+!.env.test
+secrets/
+.secrets
+credentials.json
+*.pem
+*.key
+*.p12
+
+# ============================================================
+# Docker
+# ============================================================
+.buildx-cache/
+.docker/
+
+# ============================================================
+# Temporary & Misc
+# ============================================================
+*.tmp
+*.log
+logs/
+*.local
+.direnv
+.envrc
+dev-docs/
+dev-doc/
+dev-documentation/
+orden_de_ficheros.md

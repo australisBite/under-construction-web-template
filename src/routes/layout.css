@@ -1,0 +1,225 @@
+/*
+	Estilos de diseño para la página principal de la aplicación web 
+	Este archivo define los estilos para la página en construcción, incluyendo
+	importaciones de Tailwind CSS, fuente personalizada, variables CSS para temas y
+	diseño responsivo para ilustraciones y pie de página.
+*/
+
+/* Importar los estilos base de Tailwind CSS y el plugin de tipografía */
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Habilitar el modo oscuro con selector de clase personalizado */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Fuente personalizada Maiden utilizada en los títulos */
+@font-face {
+    font-family: 'Maiden';
+    src: url('/fonts/maiden.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Propiedades CSS personalizadas para temas - valores por defecto del modo claro */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #777777;
+    --title-color: #555555;
+    --accent-color: #6c63ff;
+    --shadow-color: #cccccc;
+    --shadow-light: #eeeeee;
+}
+
+/* Sobreescritura de colores para el modo oscuro */
+.dark {
+    --bg-color: #0a0a0a;
+    --text-color: #a0a0a0;
+    --title-color: #e0e0e0;
+    --accent-color: #a78bfa;
+    --shadow-color: #333333;
+    --shadow-light: #222222;
+}
+
+/* Reiniciar todos los elementos para usar border-box y eliminar márgenes/rellenos por defecto */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del HTML con tamaño de fuente responsivo y temas */
+html{
+    font-size: 62.5%; /* 10px base para unidades rem */
+    background-color: var(--bg-color);
+    color-scheme: light;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Esquema de color del HTML en modo oscuro */
+html.dark {
+    color-scheme: dark;
+}
+
+/* Tipografía y temas del cuerpo */
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos de la sección del título principal con texto centrado y efectos de sombra */
+.main-title{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+    text-shadow:
+    1px 0px 1px var(--shadow-color), 0px 1px 1px var(--shadow-light),
+    2px 1px 1px var(--shadow-color), 1px 2px 1px var(--shadow-light),
+    3px 2px 1px var(--shadow-color), 2px 3px 1px var(--shadow-light);
+}
+
+/* Encabezado principal (Website) con tamaño de fuente responsivo */
+.main-title h1{
+    font-family: 'Maiden', sans-serif;
+    font-size: clamp(4rem, 12vw, 8rem);
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--title-color);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulo (under construction) con peso de fuente más ligero */
+.main-title h2{
+    font-family: 'Maiden', sans-serif;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/* Contenedor para las ilustraciones SVG con diseño responsivo */
+.illustration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tablet y escritorio: diseño horizontal para las ilustraciones */
+@media (min-width: 768px) {
+    .illustration-container {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .main-title {
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+    }
+}
+
+/* Animación para la ilustración SVG de la persona */
+#man {
+    animation: manBody 0.67s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+/* Animación para la ilustración SVG del perro con ligero retraso */
+#dog {
+    animation: manBody 0.73s ease-in-out infinite alternate-reverse;
+    transform-box: fill-box;
+    transform-origin: bottom;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+/* Ajuste del perro en móvil */
+@media (max-width: 767px) {
+    #dog {
+        margin-top: -2rem;
+    }
+}
+
+/* Ajustes del modo oscuro para ilustraciones SVG - cambiar colores de relleno */
+.dark svg path[fill="#3f3d56"],
+.dark svg rect[fill="#3f3d56"],
+.dark svg circle[fill="#3f3d56"] {
+    fill: #9ca3af; /* Gris claro para fondos oscuros */
+}
+
+.dark svg path[fill="#2f2e41"] {
+    fill: #d1d5db; /* Gris más claro para elementos secundarios */
+}
+
+.dark svg path[fill="#6c63ff"] {
+    fill: var(--accent-color); /* Usar el color de acento del tema */
+}
+
+/* Estilos del pie de página con contenido centrado */
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos del botón de GitHub */
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    background: #24292e; /* Fondo oscuro de GitHub */
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.github-btn:hover {
+    background: #444d56;
+}
+
+/* Ajustes del botón de GitHub en modo oscuro */
+.dark .github-btn {
+    background: #444d56;
+}
+
+.dark .github-btn:hover {
+    background: #586069;
+}
+
+/* Animación de fotogramas clave para el suave balanceo de las ilustraciones */
+@keyframes manBody{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(10deg);
+    }
+}

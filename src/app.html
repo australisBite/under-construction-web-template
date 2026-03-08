@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+		<script>
+			// Critical: Execute before paint to avoid white flash
+			try {
+				const theme = localStorage.getItem('theme');
+				const supportDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+				if (theme === 'dark' || (!theme && supportDark)) {
+					document.documentElement.classList.add('dark');
+				}
+			} catch (e) {}
+		</script>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
