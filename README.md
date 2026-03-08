@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="./src/lib/assets/favicon.svg" alt="Web frontend template" width="80" height="80" />
-  <h1>Web frontend template</h1>
+  <img src="./src/lib/assets/favicon.svg" alt="frontend template" width="80" height="80" />
+  <h1>Frontend template 'Under construction'</h1>
   <p><strong>Plataforma web de última generación construida con Svelte 5 y Three.js</strong></p>
 
   [![Svelte 5](https://img.shields.io/badge/Svelte-5.0-ff3e00?logo=svelte)](https://svelte.dev)
@@ -28,13 +28,37 @@
 
 ---
 
-## 🚀 Vision General
+## About us:
 
-Esta es una demo que forma parte de una aplicación web moderna diseñada para la máxima eficiencia y una experiencia de usuario inmersiva. Este repositorio contiene el **frontend**, desarrollado con un stack liviano y moderno, enfocado en rendimiento, seguridad y una estética refinada aprovechando la nueva version de svelte 5 y su simplicidad.
+# tucopiloto.net 🚀 próximamente
 
-tucopiloto.net nace como respuesta a un nicho en constante crecimiento, la necesidad de tener un asistente personal que nos ayude en nuestras tareas diarias, desde la gestión de tareas repetitivas, hasta la creacion de ordenes de compra, tucopilo responde a esas necesidades, enfocado en negocios emergentes, implementando tecnologias y los estandares mas modernos de la ingenieria de software como los RAG y el machine learning, ahorrando tiempo y recursos valiosos, y posicionando a nuestros usuarios a la vanguardia de la tecnologia convirtiendo tu proyecto en un negocio realmente competitivo en el mercado.
+**La Inteligencia Artificial no es un lujo exclusivo de las grandes corporaciones; es la herramienta que tu negocio necesita hoy para competir y crecer.**
 
-### ✨ Características Destacadas
+Bienvenido al repositorio oficial de **tucopiloto.net**. Actualmente nos encontramos construyendo la plataforma que transformará la manera en que gestionas tu empresa. Nuestro objetivo es democratizar el acceso a asistentes de Inteligencia Artificial para que puedas delegar las tareas repetitivas y concentrarte en lo que realmente importa: la estrategia y el crecimiento de tu negocio.
+
+## ¿Qué estamos construyendo?
+
+Entendemos que los negocios emergentes necesitan optimizar cada minuto y cada recurso. Por eso, estamos diseñando un ecosistema de agentes inteligentes y herramientas de automatización que actuarán como tu equipo de soporte 24/7. 
+
+Muy pronto, tucopiloto.net te permitirá:
+
+* **Atención Inteligente vía WhatsApp, y dentro de tu pagina web:** Chatbots avanzados capaces de entender el contexto, responder dudas de clientes y gestionar pedidos de forma natural, crear tickets de soporte, todo sin intervención humana.
+* **Tu Propio Asistente de Empresa:** Asistentes entrenados exclusivamente con la información y documentos de tu negocio, capaces de dar respuestas precisas basadas en tus propios datos.
+* **Automatización del Trabajo Pesado:** Olvídate de las tareas mecánicas. Nuestros agentes se encargarán de extraer datos clave de la web, limpiar bases de datos, realizar cálculos complejos y enviarte reportes diarios listos para analizar.
+
+La inteligencia artificial llegó para quedarse. Al implementar estas tecnologías, no solo ahorrarás cientos de horas de trabajo manual, sino que posicionarás a tu proyecto a la vanguardia tecnológica del mercado.
+
+---
+
+### 🛠️ Nota para desarrolladores (Frontend en construcción)
+
+*Aunque nuestra visión principal está enfocada en el producto final, este repositorio alberga actualmente la demo de nuestra interfaz grafica. visita nustras redes sociales y nuestra pagina web para mas informacion de nuestro proyecto.*
+
+**Si eres desarrollador** y estas interesado en el stack de nustra web, puedes clonar el repositorio de forma totalmente gratuita.
+
+### ✨ Características Destacadas:
+
+Para garantizar una experiencia inmersiva, rápida y de máximo rendimiento, hemos elegido construir nuestro frontend aprovechando la nueva versión de **Svelte 5**. Su simplicidad, combinada con su nuevo paradigma de reactividad, nos permite crear una estética refinada y un código altamente optimizado. Es un stack liviano y moderno que sienta unas bases sólidas y escalables para todo lo que está por venir.
 
 - **⚛️ Svelte 5 Runes:** Gestión de estado reactiva de grano fino para un rendimiento superior.
 - **🌌 Fondo de Partículas Interactivo:** Experiencia visual dinámica impulsada por **Three.js** con reactividad al tema (claro/oscuro).
