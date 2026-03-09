@@ -11,8 +11,13 @@
 	<link
 		href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap"
 		rel="stylesheet"
+		crossorigin="anonymous"
 	/>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet"
+		crossorigin="anonymous"
+	/>
 	<title>TuCopiloto - Under Construction</title>
 </svelte:head>
 
@@ -45,7 +50,7 @@
 	<!-- Sección del pie de página -->
 	<footer class="footer">
 		<span style="font-size: 4rem;">tucopiloto.com</span>
-		<div style="margin-top: 1rem; font-size: 1.6rem; opacity: 2;">
+		<div style="margin-top: 1rem; font-size: 1.6rem; opacity: 1;">
 			<p style="margin: 0 0 0.25rem 0;">Sitio web en desarrollo</p>
 			<p style="margin: 0 0 0.5rem 0;">Erick Carrillo</p>
 			<a

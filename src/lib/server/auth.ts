@@ -1,3 +1,4 @@
+import { building } from '$app/environment';
 import { betterAuth } from 'better-auth/minimal';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { sveltekitCookies } from 'better-auth/svelte-kit';
@@ -5,16 +6,18 @@ import { env } from '$env/dynamic/private';
 import { getRequestEvent } from '$app/server';
 import { db } from '$lib/server/db';
 
-export const auth = betterAuth({
-	baseURL: env.ORIGIN || 'http://localhost:5173',
-	secret: env.BETTER_AUTH_SECRET || 'a-very-long-secret-for-development-purposes-only-32-chars',
-	database: drizzleAdapter(db, { provider: 'pg' }),
-	emailAndPassword: { enabled: true },
-	socialProviders: {
-		github: {
-			clientId: env.GITHUB_CLIENT_ID || 'dummy-client-id',
-			clientSecret: env.GITHUB_CLIENT_SECRET || 'dummy-client-secret'
-		}
-	},
-	plugins: [sveltekitCookies(getRequestEvent)] // make sure this is the last plugin in the array
-});
+function initAuth() {
+	if (!env.BETTER_AUTH_SECRET) throw new Error('BETTER_AUTH_SECRET is not set');
+	if (!env.ORIGIN) throw new Error('ORIGIN is not set');
+
+	return betterAuth({
+		baseURL: env.ORIGIN,
+		secret: env.BETTER_AUTH_SECRET,
+		database: drizzleAdapter(db, { provider: 'pg' }),
+		emailAndPassword: { enabled: true },
+		plugins: [sveltekitCookies(getRequestEvent)] // make sure this is the last plugin in the array
+	});
+}
+
+// During SvelteKit build, env vars are unavailable. At runtime, secrets are required.
+export const auth = building ? (null! as ReturnType<typeof initAuth>) : initAuth();
