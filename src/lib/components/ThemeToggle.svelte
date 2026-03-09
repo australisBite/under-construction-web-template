@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { theme } from '$lib/stores/theme.svelte';
 
-	let { class: className = "" } = $props();
+	let { class: className = '' } = $props();
 </script>
 
 <button

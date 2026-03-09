@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,7 +12,8 @@
 				try {
 					const saved = localStorage.getItem('theme');
 					const isDark =
-						saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
+						saved === 'dark' ||
+						(!saved && window.matchMedia('(prefers-color-scheme: dark)').matches);
 					if (isDark) {
 						document.documentElement.classList.add('dark');
 					} else {
