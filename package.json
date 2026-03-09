@@ -52,6 +52,7 @@
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
+		"supabase": "^2.77.1",
 		"svelte": "^5.53.7",
 		"svelte-check": "^4.4.4",
 		"tailwindcss": "^4.2.1",
@@ -62,6 +63,7 @@
 		"vitest-browser-svelte": "^2.0.2"
 	},
 	"dependencies": {
+		"better-call": "^2.0.2",
 		"three": "0.183.2"
 	},
 	"pnpm": {
@@ -71,6 +73,14 @@
 			"esbuild": ">=0.25.0",
 			"lodash": ">=4.17.23",
 			"cookie": ">=0.7.0"
-		}
+		},
+		"onlyBuiltDependencies": [
+			"@prisma/client",
+			"@prisma/engines",
+			"better-sqlite3",
+			"esbuild",
+			"prisma",
+			"supabase"
+		]
 	}
 }
