@@ -31,4 +31,18 @@ const handleBetterAuth: Handle = async ({ event, resolve }) => {
 	return svelteKitHandler({ event, resolve, auth, building });
 };
 
-export const handle: Handle = sequence(handleSecurityHeaders, handleBetterAuth);
+const handleFaviconRedirect: Handle = async ({ event, resolve }) => {
+	const { pathname } = event.url;
+	
+	// Redirigir peticiones automáticas de navegadores y crawlers para evitar 404
+	if (pathname === '/favicon.png' || pathname === '/favicon.ico') {
+		return new Response(null, {
+			status: 302,
+			headers: { location: '/favicon.svg' }
+		});
+	}
+
+	return resolve(event);
+};
+
+export const handle: Handle = sequence(handleFaviconRedirect, handleSecurityHeaders, handleBetterAuth);
