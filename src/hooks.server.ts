@@ -6,15 +6,18 @@ import { sequence } from '@sveltejs/kit/hooks';
 
 const handleSecurityHeaders: Handle = async ({ event, resolve }) => {
 	const response = await resolve(event);
-	
+
 	// Cabeceras de seguridad recomendadas (CSP se gestiona ahora en svelte.config.js)
 	response.headers.set('X-Frame-Options', 'DENY');
 	response.headers.set('X-Content-Type-Options', 'nosniff');
 	response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
 	response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-	
+
 	if (!building) {
-		response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+		response.headers.set(
+			'Strict-Transport-Security',
+			'max-age=31536000; includeSubDomains; preload'
+		);
 	}
 
 	return response;
@@ -33,7 +36,7 @@ const handleBetterAuth: Handle = async ({ event, resolve }) => {
 
 const handleFaviconRedirect: Handle = async ({ event, resolve }) => {
 	const { pathname } = event.url;
-	
+
 	// Redirigir peticiones automáticas de navegadores y crawlers para evitar 404
 	if (pathname === '/favicon.png' || pathname === '/favicon.ico') {
 		return new Response(null, {
@@ -45,4 +48,8 @@ const handleFaviconRedirect: Handle = async ({ event, resolve }) => {
 	return resolve(event);
 };
 
-export const handle: Handle = sequence(handleFaviconRedirect, handleSecurityHeaders, handleBetterAuth);
+export const handle: Handle = sequence(
+	handleFaviconRedirect,
+	handleSecurityHeaders,
+	handleBetterAuth
+);

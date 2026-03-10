@@ -3,10 +3,11 @@
   <h1>Frontend template 'Under construction'</h1>
   <p><strong>Plataforma web de última generación construida con Svelte 5 y Three.js</strong></p>
 
-  [![Svelte 5](https://img.shields.io/badge/Svelte-5.0-ff3e00?logo=svelte)](https://svelte.dev)
-  [![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4.0-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
-  [![Three.js](https://img.shields.io/badge/Three.js-r183-black?logo=three.js)](https://threejs.org)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Svelte 5](https://img.shields.io/badge/Svelte-5.0-ff3e00?logo=svelte)](https://svelte.dev)
+[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4.0-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
+[![Three.js](https://img.shields.io/badge/Three.js-r183-black?logo=three.js)](https://threejs.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 </div>
 
 ---
@@ -38,13 +39,13 @@ Bienvenido al repositorio oficial de **tucopiloto.net**. Actualmente nos encontr
 
 ## ¿Qué estamos construyendo?
 
-Entendemos que los negocios emergentes necesitan optimizar cada minuto y cada recurso. Por eso, estamos diseñando un ecosistema de agentes inteligentes y herramientas de automatización que actuarán como tu equipo de soporte 24/7. 
+Entendemos que los negocios emergentes necesitan optimizar cada minuto y cada recurso. Por eso, estamos diseñando un ecosistema de agentes inteligentes y herramientas de automatización que actuarán como tu equipo de soporte 24/7.
 
 Muy pronto, tucopiloto.net te permitirá:
 
-* **Atención Inteligente vía WhatsApp, y dentro de tu pagina web:** Chatbots avanzados capaces de entender el contexto, responder dudas de clientes y gestionar pedidos de forma natural, crear tickets de soporte, todo sin intervención humana.
-* **Tu Propio Asistente de Empresa:** Asistentes entrenados exclusivamente con la información y documentos de tu negocio, capaces de dar respuestas precisas basadas en tus propios datos.
-* **Automatización del Trabajo Pesado:** Olvídate de las tareas mecánicas. Nuestros agentes se encargarán de extraer datos clave de la web, limpiar bases de datos, realizar cálculos complejos y enviarte reportes diarios listos para analizar.
+- **Atención Inteligente vía WhatsApp, y dentro de tu pagina web:** Chatbots avanzados capaces de entender el contexto, responder dudas de clientes y gestionar pedidos de forma natural, crear tickets de soporte, todo sin intervención humana.
+- **Tu Propio Asistente de Empresa:** Asistentes entrenados exclusivamente con la información y documentos de tu negocio, capaces de dar respuestas precisas basadas en tus propios datos.
+- **Automatización del Trabajo Pesado:** Olvídate de las tareas mecánicas. Nuestros agentes se encargarán de extraer datos clave de la web, limpiar bases de datos, realizar cálculos complejos y enviarte reportes diarios listos para analizar.
 
 La inteligencia artificial llegó para quedarse. Al implementar estas tecnologías, no solo ahorrarás cientos de horas de trabajo manual, sino que posicionarás a tu proyecto a la vanguardia tecnológica del mercado.
 
@@ -52,7 +53,7 @@ La inteligencia artificial llegó para quedarse. Al implementar estas tecnologí
 
 ### 🛠️ Nota para desarrolladores (Frontend en construcción)
 
-*Aunque nuestra visión principal está enfocada en el producto final, este repositorio alberga actualmente la demo de nuestra interfaz grafica. visita nustras redes sociales y nuestra pagina web para mas informacion de nuestro proyecto.*
+_Aunque nuestra visión principal está enfocada en el producto final, este repositorio alberga actualmente la demo de nuestra interfaz grafica. visita nustras redes sociales y nuestra pagina web para mas informacion de nuestro proyecto._
 
 **Si eres desarrollador** y estas interesado en el stack de nustra web, puedes clonar el repositorio de forma totalmente gratuita.
 
@@ -70,14 +71,14 @@ Para garantizar una experiencia inmersiva, rápida y de máximo rendimiento, hem
 
 ## 🛠️ Stack Tecnológico
 
-| Herramienta | Función |
-| :--- | :--- |
-| **SvelteKit** | Framework de Aplicación |
-| **TypeScript** | Lenguaje de Programación |
-| **Vite 7** | Herramienta de Construcción |
+| Herramienta    | Función                                                  |
+| :------------- | :------------------------------------------------------- |
+| **SvelteKit**  | Framework de Aplicación                                  |
+| **TypeScript** | Lenguaje de Programación                                 |
+| **Vite 7**     | Herramienta de Construcción                              |
 | **PostgreSQL** | Base de Datos Relacional (para futuras implementaciones) |
-| **Playwright** | Testing de Extremo a Extremo |
-| **Vitest** | Pruebas Unitarias y de Componentes |
+| **Playwright** | Testing de Extremo a Extremo                             |
+| **Vitest**     | Pruebas Unitarias y de Componentes                       |
 
 ---
 
@@ -86,6 +87,7 @@ Para garantizar una experiencia inmersiva, rápida y de máximo rendimiento, hem
 Sigue estos pasos para levantar el entorno de desarrollo localmente:
 
 ### 1. Clonar e instalar
+
 ```bash
 git clone https://github.com/australisBite/tucopiloto-web.git
 cd tucopiloto-web/micopiloto-web
@@ -93,17 +95,21 @@ pnpm install
 ```
 
 ### 2. Configuración de Variables de Entorno
+
 Copia el archivo de ejemplo y rellena tus credenciales:
+
 ```bash
 cp .env.example .env
 ```
 
 ### 3. Levantar Infraestructura (Docker)
+
 ```bash
 pnpm db:start
 ```
 
 ### 4. Servidor de Desarrollo
+
 ```bash
 pnpm dev
 ```
@@ -122,4 +128,3 @@ La aplicación estará disponible en `http://localhost:5173`.
   Desarrollado por <strong>Erick Carrillo y Claude Code</strong><br/>
   <a href="https://github.com/australisBite">@australisBite</a>
 </div>
-

@@ -6,21 +6,21 @@
 	let canvas: HTMLCanvasElement;
 	let geometry: THREE.BufferGeometry;
 	let colorTypeArr: Uint8Array;
-	const N = 10000; 
+	const N = 10000;
 
 	// ── Color Palettes ─────────────────────────────────────────────
 	const lightPalette: [number, number, number][] = [
 		[0x1a / 255, 0x73 / 255, 0xe8 / 255], // Deep Blue
 		[0x1e / 255, 0x8e / 255, 0x3e / 255], // Deep Green
 		[0x8a / 255, 0x2b / 255, 0xe2 / 255], // Violet
-		[0x00 / 255, 0x00 / 255, 0x00 / 255]  // Black
+		[0x00 / 255, 0x00 / 255, 0x00 / 255] // Black
 	];
 
 	const darkPalette: [number, number, number][] = [
 		[0x8a / 255, 0xb4 / 255, 0xf8 / 255], // Light Blue
 		[0x81 / 255, 0xc9 / 255, 0x95 / 255], // Light Green
 		[0xfd / 255, 0xd6 / 255, 0x63 / 255], // Light Yellow
-		[0xff / 255, 0xff / 255, 0xff / 255]  // White
+		[0xff / 255, 0xff / 255, 0xff / 255] // White
 	];
 
 	const getPalette = () => {
@@ -65,7 +65,7 @@
 		const tctx = tc.getContext('2d')!;
 		tctx.beginPath();
 		tctx.arc(16, 16, 14, 0, Math.PI * 2);
-		tctx.fillStyle = '#ffffff'; 
+		tctx.fillStyle = '#ffffff';
 		tctx.fill();
 		const sprite = new THREE.CanvasTexture(tc);
 
@@ -86,7 +86,7 @@
 		for (let i = 0; i < N; i++) {
 			const row = Math.floor(i / COLS);
 			const col = i % COLS;
-			
+
 			const x = (col / COLS - 0.5) * halfW * 2.5 + (Math.random() - 0.5) * 5;
 			const y = (row / ROWS - 0.5) * halfH * 2.5 + (Math.random() - 0.5) * 5;
 			const z = (Math.random() - 0.5) * 20;
@@ -101,7 +101,7 @@
 
 			const type = Math.floor(Math.random() * 4);
 			colorTypeArr[i] = type;
-			
+
 			const palette = getPalette();
 			const c = palette[type];
 			colArr[i * 3] = c[0];
@@ -145,10 +145,10 @@
 		}
 		window.addEventListener('resize', onResize);
 
-		const REPEL_RADIUS = 100;   
-		const REPEL_STRENGTH = 0.5; 
-		const SPRING = 0.008;       
-		const DAMPING = 0.96;       
+		const REPEL_RADIUS = 100;
+		const REPEL_STRENGTH = 0.5;
+		const SPRING = 0.008;
+		const DAMPING = 0.96;
 
 		let animId: number;
 
@@ -167,7 +167,7 @@
 				const dx = x - mouseX3D;
 				const dy = y - mouseY3D;
 				const distSq = dx * dx + dy * dy;
-				
+
 				if (distSq < REPEL_RADIUS * REPEL_RADIUS) {
 					const dist = Math.sqrt(distSq);
 					const force = (1 - dist / REPEL_RADIUS) * REPEL_STRENGTH;

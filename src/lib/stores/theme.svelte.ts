@@ -11,7 +11,9 @@ function createThemeStore() {
 	}
 
 	return {
-		get value() { return current; },
+		get value() {
+			return current;
+		},
 		set value(v: Theme) {
 			current = v;
 			if (browser) {
