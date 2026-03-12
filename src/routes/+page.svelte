@@ -2,8 +2,7 @@
 	// Importar componentes Svelte personalizados
 	import ParticleField from '$lib/components/ParticleField.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import ManIllustration from '$lib/components/illustrations/ManIllustration.svelte';
-	import DogIllustration from '$lib/components/illustrations/DogIllustration.svelte';
+	import AstronautIllustration from '$lib/components/illustrations/AstronautIllustration.svelte';
 </script>
 
 <svelte:head>
@@ -35,21 +34,20 @@
 		<!-- Sección de título centrado -->
 		<div class="row justify-content-center">
 			<div class="col-12 main-title">
-				<h1>Website</h1>
-				<h2>under construction</h2>
+				
+				<h2>Sitio web en construccion</h2>
 			</div>
 		</div>
 
-		<!-- Contenedor para las ilustraciones SVG animadas -->
+		<!-- Contenedor para la ilustración del astronauta -->
 		<div class="illustration-container">
-			<ManIllustration />
-			<DogIllustration />
+			<AstronautIllustration />
 		</div>
 	</div>
 
 	<!-- Sección del pie de página -->
-	<footer class="footer">
-		<span style="font-size: 4rem;">tucopiloto.com</span>
+	<footer class="footer dark:text-blue-100">
+		<span style="font-size: 4rem;">tucopilo.net</span>
 		<div style="margin-top: 1rem; font-size: 1.6rem; opacity: 1;">
 			<p style="margin: 0 0 0.25rem 0;">Sitio web en desarrollo</p>
 			<p style="margin: 0 0 0.5rem 0;">Erick Carrillo</p>
