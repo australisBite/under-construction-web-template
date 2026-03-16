@@ -47,7 +47,7 @@
 
 	<!-- Sección del pie de página -->
 	<footer class="footer dark:text-blue-100">
-		<span style="font-size: 4rem;">tucopilo.net</span>
+		<span style="font-size: 4rem;">tucopiloto.net</span>
 		<div style="margin-top: 1rem; font-size: 1.6rem; opacity: 1;">
 			<p style="margin: 0 0 0.25rem 0;">Sitio web en desarrollo</p>
 			<p style="margin: 0 0 0.5rem 0;">Erick Carrillo</p>
